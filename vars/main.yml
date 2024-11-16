@@ -1,0 +1,12 @@
+---
+# vars file for doppler
+doppler_os: '{{ doppler_os_map[ansible_system] }}'
+doppler_arch: '{{ doppler_arch_map[ansible_architecture] }}'
+doppler_platform: '{{ doppler_os }}_{{ doppler_arch }}'
+doppler_name: doppler_{{ doppler_ver }}_{{ doppler_platform }}
+doppler_archive: '{{ doppler_name }}.{{ doppler_archive_type | default("tar.gz") }}'
+doppler_url: '{{ doppler_mirror }}/{{ doppler_ver }}/{{ doppler_archive }}'
+doppler_tmp_archive: '{{ doppler_tmp_dir | default("/tmp") }}/{{ doppler_archive }}'
+doppler_install_dir: '{{ doppler_parent_install_dir }}/{{ doppler_name }}'
+doppler_exe: '{{ doppler_install_dir }}/doppler'
+doppler_link: '{{ doppler_parent_install_dir }}/bin/doppler'

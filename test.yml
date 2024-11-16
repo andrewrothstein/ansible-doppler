@@ -1,0 +1,14 @@
+---
+- name: Testing andrewrothstein.doppler role
+  hosts: all
+  tasks:
+    - name: Installing andrewrothstein.doppler
+      ansible.builtin.include_role:
+        name: '{{ playbook_dir }}'
+    - name: Executing 'doppler --version'
+      ansible.builtin.command: doppler --version
+      changed_when: false
+      register: 'doppler_test_output'
+    - name: Output from 'doppler --version'
+      ansible.builtin.debug:
+        msg: '{{ doppler_test_output.stdout }}'

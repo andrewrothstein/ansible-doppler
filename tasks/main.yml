@@ -1,0 +1,61 @@
+---
+- name: Resolve platform specific vars
+  ansible.builtin.include_vars: '{{ item }}'
+  with_first_found:
+    - files:
+        - '{{ ansible_distribution }}-{{ ansible_distribution_release }}.yml'
+        - '{{ ansible_distribution }}.yml'
+        - '{{ ansible_os_family }}.yml'
+      skip: true
+      paths:
+        - '{{ role_path }}/vars'
+- name: Look for install at {{ doppler_exe }}
+  become: true
+  ansible.builtin.stat:
+    path: '{{ doppler_exe }}'
+  changed_when: false
+  register: doppler_binary
+- name: Downloading and installing doppler
+  become: true
+  become_user: root
+  when: not doppler_binary.stat.exists
+  block:
+    - name: Downloading {{ doppler_url }}
+      become: true
+      become_user: root
+      ansible.builtin.get_url:
+        url: '{{ doppler_url }}'
+        dest: '{{ doppler_tmp_archive }}'
+        mode: '644'
+    - name: Mkdir {{ doppler_install_dir }}
+      become: true
+      become_user: root
+      ansible.builtin.file:
+        path: '{{ doppler_install_dir }}'
+        state: directory
+        mode: '755'
+    - name: Installing andrewrothstein.unarchivedeps
+      ansible.builtin.include_role:
+        name: andrewrothstein.unarchivedeps
+    - name: Unarchive to {{ doppler_install_dir }}
+      become: true
+      become_user: root
+      ansible.builtin.unarchive:
+        remote_src: true
+        src: '{{ doppler_tmp_archive }}'
+        dest: '{{ doppler_install_dir }}'
+        creates: '{{ doppler_exe }}'
+  always:
+    - name: Rm {{ doppler_tmp_archive }}
+      become: true
+      become_user: root
+      ansible.builtin.file:
+        path: '{{ doppler_tmp_archive }}'
+        state: absent
+- name: Link {{ doppler_link }} to {{ doppler_exe }}
+  become: true
+  become_user: root
+  ansible.builtin.file:
+    src: '{{ doppler_exe }}'
+    dest: '{{ doppler_link }}'
+    state: link
