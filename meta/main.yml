@@ -1,12 +1,12 @@
 ---
 galaxy_info:
-  author: 'Andrew Rothstein'
+  author: Andrew Rothstein
+  company: BlackRock
   description: '@TODO document doppler goes here'
-  company: 'BlackRock'
   galaxy_tags: []
   license: MIT
   min_ansible_version: '1.2'
-  namespace: 'andrewrothstein'
+  namespace: andrewrothstein
   platforms:
     - name: Alpine
       versions:
@@ -30,4 +30,4 @@ galaxy_info:
       versions:
         - jammy
         - noble
-  role_name: 'doppler'
+  role_name: doppler
