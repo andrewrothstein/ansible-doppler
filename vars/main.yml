@@ -1,7 +1,7 @@
 ---
 # vars file for doppler
-doppler_os: '{{ doppler_os_map[ansible_system] }}'
-doppler_arch: '{{ doppler_arch_map[ansible_architecture] }}'
+doppler_os: '{{ doppler_os_map[ansible_facts["system"]] }}'
+doppler_arch: '{{ doppler_arch_map[ansible_facts["architecture"]] }}'
 doppler_platform: '{{ doppler_os }}_{{ doppler_arch }}'
 doppler_name: doppler_{{ doppler_ver }}_{{ doppler_platform }}
 doppler_archive: '{{ doppler_name }}.{{ doppler_archive_type | default("tar.gz") }}'
