@@ -1,6 +1,6 @@
 ---
 # defaults file for doppler
-doppler_ver: 3.75.3
+doppler_ver: 3.76.0
 doppler_os_map:
   Linux: linux
   Darwin: macOS
@@ -741,3 +741,55 @@ doppler_checksums:
     windows_armv6: sha256:15238359d40e0b171a41cd1feae91aebb027b0c061da57372604e4db146532e1
     # https://github.com/DopplerHQ/cli/releases/download/3.75.3/doppler_3.75.3_windows_armv7.zip
     windows_armv7: sha256:46696d44c4c413cc77bf7c996c724d62fbb92e948765127c76ff5ec0b371e175
+  # https://github.com/DopplerHQ/cli/releases/download/3.76.0/checksums.txt
+  '3.76.0':
+    # https://github.com/DopplerHQ/cli/releases/download/3.76.0/doppler_3.76.0_freebsd_amd64.tar.gz
+    freebsd_amd64: sha256:b378359513ea6e28d1022d254a90d45a3c05a8984e6464c58760bc5e9901683e
+    # https://github.com/DopplerHQ/cli/releases/download/3.76.0/doppler_3.76.0_freebsd_arm64.tar.gz
+    freebsd_arm64: sha256:70315694df41a644317e91aae62462bd341cf8ce9922d4f4b9ba21e03fd666cc
+    # https://github.com/DopplerHQ/cli/releases/download/3.76.0/doppler_3.76.0_freebsd_armv6.tar.gz
+    freebsd_armv6: sha256:84bec3c1c27949fc464df68acb40c2a59efa18d29f36ef89ff78f86b0d13ad39
+    # https://github.com/DopplerHQ/cli/releases/download/3.76.0/doppler_3.76.0_freebsd_armv7.tar.gz
+    freebsd_armv7: sha256:dabe5d0f08df60ed010c6be2ed7fdba5a4ba4db0931e19f4f6eb435c8390adc6
+    # https://github.com/DopplerHQ/cli/releases/download/3.76.0/doppler_3.76.0_linux_amd64.tar.gz
+    linux_amd64: sha256:04f1ff30ed162d7af1dba7f11ad6a37ef35099de86a7ec6e261b64b1b337a3f3
+    # https://github.com/DopplerHQ/cli/releases/download/3.76.0/doppler_3.76.0_linux_arm64.tar.gz
+    linux_arm64: sha256:ee57701385fc33fba550f913641812ed2ff020631e3ac8cc14616cbde2118884
+    # https://github.com/DopplerHQ/cli/releases/download/3.76.0/doppler_3.76.0_linux_armv6.tar.gz
+    linux_armv6: sha256:211c5ed52f172a6d153d756e59fdb7ab0e5ac6a248828f1f7e879009ce778c21
+    # https://github.com/DopplerHQ/cli/releases/download/3.76.0/doppler_3.76.0_linux_armv7.tar.gz
+    linux_armv7: sha256:530b2b9319eb97d31180ddcdb9573c2e9fb1c6872fbfe2cb1add0edd0ec5da13
+    # https://github.com/DopplerHQ/cli/releases/download/3.76.0/doppler_3.76.0_linux_i386.tar.gz
+    linux_i386: sha256:ba0f45523dbfdf5e64043f7bb3a1cab6634ca9b34db09f6ec669cf81ce9a8ba9
+    # https://github.com/DopplerHQ/cli/releases/download/3.76.0/doppler_3.76.0_macOS_amd64.tar.gz
+    macOS_amd64: sha256:1a70842d5de95232c5bae732721058690c748db5e5c7510e828116392e9f0682
+    # https://github.com/DopplerHQ/cli/releases/download/3.76.0/doppler_3.76.0_macOS_arm64.tar.gz
+    macOS_arm64: sha256:f8a546d4b177255816f3b1262347bb643b0bcb8cf82d5859e5426c11f56636dc
+    # https://github.com/DopplerHQ/cli/releases/download/3.76.0/doppler_3.76.0_netbsd_amd64.tar.gz
+    netbsd_amd64: sha256:36fc754a4d407b56cc546be47ce744b0aba40bf9e1f9b7f06de490e45d24d453
+    # https://github.com/DopplerHQ/cli/releases/download/3.76.0/doppler_3.76.0_netbsd_arm64.tar.gz
+    netbsd_arm64: sha256:9b4bceba4f2cb2f9e2241cd0c28433faceb47fafd2d5cc938622245397524b1d
+    # https://github.com/DopplerHQ/cli/releases/download/3.76.0/doppler_3.76.0_netbsd_armv6.tar.gz
+    netbsd_armv6: sha256:8101d9b8d1799dcaacc38a5622d0013681fa572a06d3b924b8e906ebc95c5e21
+    # https://github.com/DopplerHQ/cli/releases/download/3.76.0/doppler_3.76.0_netbsd_armv7.tar.gz
+    netbsd_armv7: sha256:f763ab15f73e5b49a29eaedb7051fcca971a23877b341cd253401dde63a81f09
+    # https://github.com/DopplerHQ/cli/releases/download/3.76.0/doppler_3.76.0_netbsd_i386.tar.gz
+    netbsd_i386: sha256:69ba006d5feb7c4a2074419b0c63401b1478413d4b61e0415945d8d6ef84ee67
+    # https://github.com/DopplerHQ/cli/releases/download/3.76.0/doppler_3.76.0_openbsd_amd64.tar.gz
+    openbsd_amd64: sha256:19b06d1f3bfeec700bc0b91ea8b1fc61af4500ae340849f3c3fe64fdd0cbd384
+    # https://github.com/DopplerHQ/cli/releases/download/3.76.0/doppler_3.76.0_openbsd_arm64.tar.gz
+    openbsd_arm64: sha256:42f5ccdd2681a4f70d03e6eabcb7051fc2004b773df82eeedb4761b2558e78ea
+    # https://github.com/DopplerHQ/cli/releases/download/3.76.0/doppler_3.76.0_openbsd_armv6.tar.gz
+    openbsd_armv6: sha256:acdf2199308fca7c4e8c2d45302e925904c53e7a93c60ba015b111c6ec280dd2
+    # https://github.com/DopplerHQ/cli/releases/download/3.76.0/doppler_3.76.0_openbsd_armv7.tar.gz
+    openbsd_armv7: sha256:03566f0bd95f8448b7db0ecdd53e95c15235940310f1c0f4eb402eb23cec08a0
+    # https://github.com/DopplerHQ/cli/releases/download/3.76.0/doppler_3.76.0_openbsd_i386.tar.gz
+    openbsd_i386: sha256:58afcc904f179fcb4a0b6d9ac6415c591cfd89a509f48811fddc5b606ba3c4b8
+    # https://github.com/DopplerHQ/cli/releases/download/3.76.0/doppler_3.76.0_windows_amd64.zip
+    windows_amd64: sha256:fd095b1849eda66547f2bcb4265b31544d9a282a3362d73d82d28262ecd67edd
+    # https://github.com/DopplerHQ/cli/releases/download/3.76.0/doppler_3.76.0_windows_arm64.zip
+    windows_arm64: sha256:b46188b0ade59a093414a91c9361295c572d9e3d746e9047437e4552a684036e
+    # https://github.com/DopplerHQ/cli/releases/download/3.76.0/doppler_3.76.0_windows_armv6.zip
+    windows_armv6: sha256:
+    # https://github.com/DopplerHQ/cli/releases/download/3.76.0/doppler_3.76.0_windows_armv7.zip
+    windows_armv7: sha256:
