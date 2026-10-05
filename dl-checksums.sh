@@ -55,8 +55,8 @@ dl_ver() {
     dl $ver $lchecksums openbsd i386
     dl $ver $lchecksums windows amd64 zip
     dl $ver $lchecksums windows arm64 zip
-    dl $ver $lchecksums windows armv6 zip
-    dl $ver $lchecksums windows armv7 zip
 }
 
-dl_ver ${1:-3.76.0}
+dl_ver 3.76.4
+dl_ver 3.76.5
+dl_ver 3.76.6
